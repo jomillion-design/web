@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form test</title>
+</head>
+
+<!-- Q. 실무에서 이렇게 리스트로 묶는 게 효율적인 방식인지?
+    현재 코드에서 간단하게, 효율적으로 코드를 쓰는 방식이 있다면 어떤 차이가 있는지
+-->
+
+<body>  
+  <form action="">
+    <fieldset>
+      <h2>프론트엔드 개발자 지원서</h2>
+      <p>HTML,CSS, 자바스크립트의 기술을 이해하고 실무 경험이 있는 분들을 찾습니다.</p>
+      <hr> <!-- br:단락 나눔 / hr: 선 긋는거 -->
+
+      <ul>
+        <li>
+          <legend>개인정보</legend>
+          <blockquote>
+            <label for="name">이름</label>
+            <input type="name" id="name" placeholder="공백 없이 입력하세요.">
+            <!-- 타입 자꾸 뺴먹는다 ;;!!! 
+            그리고 힌트 주는 속성머엿디?
+            placeholder = "힌트 줄 내용 입력" <<!!!! 
+            -->
+            <br>
+            <label for="phone">연락처</label> 
+            <!-- 전화번호 형식 <- 숫자만 들어가게? 하는 거??? ... 아님 하이픈 형식이 자동으로 나오게 하는거??
+             문제를 이해 못함 -->
+            <input type="tel" id="phone" required>
+            <!-- 왜 블럭처럼 안 쌓이는지 아는 사람 / 
+             일단 모르겟어서 br넣음  br이란? 인라인 요소 단락 나눠주는 거
+             -->
+          </blockquote>
+        </li>
+
+        <li>
+          <legend>지원 분야</legend>
+          <blockquote>
+            <input type="radio" id="rd" name="jc">
+            <label for="rd">웹 퍼블리싱</label>
+            <br>
+            <input type="radio" id="rd" name="jc">
+            <label for="rd">웹 애플리케이션 개발</label>
+            <br>
+            <input type="radio" id="rd" name="jc">
+            <label for="rd">개발 환경 개선</label>
+          </blockquote>
+          <!-- radio는 name << 속성 쓰는 거 까먹지 말기~ -->
+        </li>
+
+        <li>
+          <legend>지원동기</legend>
+          <textarea cols="60" rows="5" maxlength="60" placeholder="본사 지원 동기를 간략히 써주세요."></textarea>
+          <!-- <input type="text" id="tb" value="본사 지원 동기를 간략히 써주시오." max="60" lang="5"> 
+           이렇게 썻었고. 틀린 이유
+           1. 태그의 활용을 제대로 파악하자
+           textarea 태그= 여러 줄 텍스트 입력, 사용자 약관 등에 쓰이는 태그인데 
+           2. 속성을 외우자
+           cols < 텍스트 영역을 가로 너비를 >글자 수< 단위로 지정  속성
+           rows <세로 길이 줄 단위로 지정
+          -->
+        </li>
+
+        <li>
+          <button>접속하기</button>
+          <input type="button" value="다시쓰기">
+        </li>
+
+      </ul>
+    </fieldset>
+  </form>
+</body>
+
+</html>

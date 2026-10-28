@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css 포지셔닝</title>
+  <style>
+    *{margin: 0; padding: 0;} 
+
+    #wrap {
+      width: 300px;
+      height: 300px;
+      border: 1px solid #333;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    /* 그니까 앱솔루트의 포지션을 가진 애는 상단의 포지션을 기준으로 삼음. 근데 바로 위 엄마한테 없다? 그럼 할머니 찾아가는겨 */
+
+    .box {
+      width: 50px;
+      height: 50px;
+      background: rgba(255,0,255,0.8);
+      text-align: center;
+      line-height: 50px;
+      border-radius: 50%;
+      position:absolute
+    }
+
+    .box1{
+      right: 0;
+      bottom: 0;
+    }
+    .box2{
+      right: 0;
+      top: 0;
+    }
+    .box3{
+      left: 0;
+      bottom: 0;
+    }
+    .box4{
+
+      /* inset: calc(300px - 50%);  얘는 나중에 배웁시다~*/
+    
+      /* 좌표값으로 이동시
+      left: 125px;
+      top:125px; 
+      px로 전체 너비 값에서 반절 + 요소값 반절 나눈거
+
+      /* inset: 50%; 
+      => 안됐던 이유!! 요소 값을 아예 생각하지 않음!! 요소 값 반절 (상하, 좌우)을 뺴야 정확한 위치로 들어감~*/ 
+
+      top: 50%;
+      left: 50%; 
+      margin-left: -25px;
+      margin-top: -25px;
+    }
+    .box5{
+      left: 0;
+      top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div class="box box1">박스1</div>
+    <div class="box box2">박스2</div>
+    <div class="box box3">박스3</div>
+    <div class="box box4">박스4</div>
+    <div class="box box5">박스5</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+@charset "utf-8"; /* 자 utf-8 방식으로 부호화(인코딩) 시작합니다~ 하는 게 뭐다!? charset!! */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&family=Nanum+Myeongjo&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+.Nanum_Myeongjo{
+  font-family: "Nanum Myeongjo", serif;
+}
+.IBM{
+font-family: "IBM Plex Sans KR", sans-serif;
+}
+.Noto_Sans{
+ font-family: "Noto Sans KR", sans-serif;
+}
+
+/* 자~~
+font-family: "글꼴이름", "기본 글꼴로 적용 될 글꼴이 위로 덮어씌이는 방식"*/

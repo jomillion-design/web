@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>비디오 재생하기</title>
+</head>
+
+<body>
+  <!-- 
+        width height 비디오 크기 조절
+        controls 미디어 파일에 컨트롤 막대 표시
+        muted 비디오를 재생할때 소리는 끄고 화면만 재생
+        autoplay 미디어 파일을 다운로드하자마자 자동으로 재생
+        loop 미디어 파일을 반복 재생
+
+        **웹 표준 규칙으로 autoplay와 muted가 함께 있어야만 페이지 자동 재생이 시작됨
+        오디오가 있는 경우에만 허용되며
+        1. UX 불쾌감 방지
+        2. 배터리 절약
+        3. 주요 브라우저 정책 
+        3가지의 이유가 있음 (걍 글쿤. 하고 넘어가면 됨)
+  -->
+  <video src="media/Painting.mp4" controls loop autoplay muted
+  width="800" height="400"></video> <!-- 동영산 자체 크기보다 플레이어 영상이 작아지는 느낌 -->
+</body>
+
+</html>

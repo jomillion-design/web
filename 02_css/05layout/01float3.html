@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>layout</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* 이게 박스 컨텐츠들 리셋, 걍 기본으로 쓰는 듯 ㅇㅇ */
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .clearfix::after {
+      /* 얘는 css로 가상요소 만들기 하는 거  */
+      content: '';
+      display: block;
+      clear: both;
+    }
+
+    /* ?? */
+
+    body,
+    h2 {
+      font-size: 30px;
+    }
+
+    .container {
+      width: 1080px;
+      margin: 0 auto;
+    }
+
+    nav {
+      background: pink;
+    }
+
+    nav ul li {
+      /* 왜 일케 부르는 건가여 걍 ul li 부르면 되지 않남.  */
+      background: lemonchiffon;
+      width: 25%;
+      float: left;
+      /* 부모가 자식의 height 값은 인시 학지 못해서, 없는 걸로 나타난다?? 뭔소리야 */
+    }
+
+    nav ul a{
+      border-right: 1px solid #ccc;
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+    }
+
+    nav ul li:nth-child(2) a{ /* 이렇게 쓰거나 last-child로 부르거나 */
+      border-right: 0; /* <보더 없애기  */
+
+    }
+
+/* 
+    float 무효화 
+    1.celar:both
+    2.overflow:hidden|
+    3.content:block;
+    4.clear:both  M모두 다 스타일, ㅇ건 걍 이워야함.  */
+
+    main {
+      background: #ccc;
+
+    }
+
+    header {
+      background: red;
+      width: 250px;
+      height: 500px;
+      float: left;
+    }
+
+    .con1 {
+      background: darkblue;
+      width: 250px;
+      height: 500px;
+      float: left;
+    }
+
+    .con2 {
+      background: sienna;
+      width: 560px;
+      height: 500px;
+      float: right;
+    }
+
+    footer {
+      background: lemonchiffon;
+      height: 80px;
+      border: 2px solid #333;
+    }
+
+    footer .container{
+      background: gold;
+    }
+
+    .box1{
+      width: 40xp;
+      height: 60%;
+      background: red;
+      float: left;
+    }
+
+    .box2{
+      width: 40xp;
+      height: 60%;
+      background: rgb(72, 0, 255);
+      float: right;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <nav class="container">
+      <ul class="gnb clearfix"><!-- 글로벌 내비게이션 약자 gnb -->
+        <li><a href="#">메뉴 1번</a></li>
+        <li><a href="#">메뉴 2번</a></li>
+        <li><a href="#">메뉴 3번</a></li>
+        <li><a href="#">메뉴 4번</a></li>
+      </ul>
+    </nav>
+
+    <main class="container clearfix">
+      <header>header</header>
+      <section class="con1">
+        <h2>Con1</h2>
+      </section>
+      <section class="con2">
+        <h2>Con2</h2>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container clearfix">
+        <div class="box1">footer1</div>
+        <div class="box2">footer2</div>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

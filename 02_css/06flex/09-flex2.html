@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex</title>
+  <link rel="stylesheet" href="default.css">
+  <style>
+    .flex_container{
+      display: flex;
+      flex-wrap: wrap; /* 자리가 없으면 아래로 떨어짐 (블록 요소 특징) */
+      width: 1360px;
+      margin: 0 auto;
+    }
+
+    .flex_item{
+      flex: 1 1 auto; 
+    }
+
+    .flex_item:nth-child(1){
+      width: 30%;
+    }
+    .flex_item:nth-child(2){
+      width: 60%;
+    }
+    .flex_item:nth-child(3){
+      width: 20%;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="flex_container">
+    <div class="flex_item">
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis eaque repellat tempora accusamus corporis vitae esse enim! Suscipit tenetur odio praesentium quae impedit sint quod amet ab. Quod sequi error distinctio illo voluptas nostrum ea, ab, eligendi suscipit nisi omnis, ipsam vitae quaerat earum? Voluptatibus consectetur quasi dolore velit, repellat natus aliquam a officia aliquid. Rerum dolorem sint voluptatum fuga rem dolore sit laboriosam earum deleniti reiciendis enim mollitia doloremque non nostrum, nobis consequuntur eum nesciunt. Totam laborum magnam natus vitae? Eaque aspernatur minima pariatur sapiente eum in veritatis ipsa perspiciatis. Reprehenderit iste, error id quo laborum facere ad obcaecati.</p>
+    </div>
+    <div class="flex_item">
+      bbb
+    </div>
+    <div class="flex_item">
+      cccc
+    </div>
+  </div>
+</body>
+</html>

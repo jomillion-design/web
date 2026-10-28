@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>z-index</title>
+  <style>
+    /* * m0 h0 안하는 이유 : 어차피 포지션 앱솔루트를 줄거라서, 앱솔루트는 흐름을 무시해서 굳이? */
+    .wrap{
+      
+      width: 1000px;
+      height: 500px;
+      background: rgba(0,255,255,0.5);
+      position: absolute;
+      inset: 0;
+      margin: auto;
+    }
+
+    .box{
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      line-height: 100px;
+      background: hotpink;
+      position: absolute;
+    }
+
+    .box1{
+      background: yellow;
+      left: 50px;
+      top: 50px;
+      z-index: 3;
+    }
+    .box2{
+      background: gainsboro;
+      left: 60px;
+      top: 60px;
+    }
+    .box3{
+      left: 70px;
+      top: 70px;
+      background: beige;
+      z-index: 2;
+    }
+    .box4{
+      left: 10px;
+      top: 10px;
+      background: rebeccapurple;
+      z-index: -1;  /* 보통 없음, 요소가 잡으면 안 될떄. (a 링크에는 절 대 절 대 쓰지 않는디~~~!! 다만, 백그라운드 밑에꾸밀 떄 음수 사용 ) */
+    }
+    .box5{
+      left: 90px;
+      top: 90px;
+      z-index: 100;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3">3</div>
+    <div class="box box4">4</div>
+    <div class="box box5">5</div>
+  </div>
+</body>
+</html>

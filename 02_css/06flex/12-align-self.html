@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>align-self</title>
+  <link rel="stylesheet" href="default.css">
+  <style>
+    .flex_container {
+      display: flex;
+      height: 100vh;
+      flex-direction: column;
+      justify-content: center;
+      /* 스트레치 (기본값) 때문에 늘어나 보이는 것. 혼동 X */
+      align-items: center;
+    }
+
+    .flex_item:nth-child(2) {
+      align-self: auto;
+      /* 부모의 얼라인 아이템을 따른다 */
+      align-items: stretch;
+      align-self: flex-start;
+      align-self: flex-end;
+      align-self: baseline;
+      align-self: center; 
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="flex_container">
+    <div class="flex_item">aaaaaaaaaaa</div>
+    <div class="flex_item">bbbbbbbbbb</div>
+    <div class="flex_item">cccccccccc</div>
+  </div>
+</body>
+
+</html>

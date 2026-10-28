@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>비디오 재생하기 - 풀페이지</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+
+    figure{
+      width: 100%;
+      height: 100vh; /* vh 뭔 뜻임 */
+      overflow: hidden;/* 이건 뭐임? */
+    }
+
+    #bg {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    #container {
+      position: absolute;
+      left: 100px;
+      top: 100px;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <!-- 독립 콘텐츠  태그. 근데 얘는 잘 이해가 안감 어떤 느낌인건지? -->
+  <!-- section은 주제 별 구역을 나눔 / figure는 섹션 안의 콘텐츠 구성 요소를 묶어줌(제목, 서론, 본론, 이미지,출처 등) -->
+  <figure> 
+    <video src="media/flower.mp4" id="bg" autoplay muted loop playsinline poster="images/flame.jpg">
+    </video>
+  </figure>
+
+  <div id="container">
+    <h2>Flower Video</h2>
+  </div>
+</body>
+</html>

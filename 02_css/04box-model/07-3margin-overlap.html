@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마진 중첩 현상</title>
+    <!-- 마진 중첩 현상이란, 상하의 위에 있는 요소와 아래에 있는 요소가 겹칠 때를 말한다. 
+     
+    ex1 -마진 상하좌우 10
+
+    ex2- 마진 상하좌우 20 
+
+    이렇게 되어있을 때, 1의 하와 2의 상이 마진이 겹치게 되는데 두 개의 값이 합쳐서 30이 띄어지는 게 아닌 더 큰쪽의 마진이 승리하여 20만 띄워지게 나온다. 
+    하지만 검사도구를 통해 확인 해 본다면, 1,2의 마진이 설정값으로 띄어진 것으로 나온다. -->
+
+    <!-- 아래 문서에 있는 메인의 컨테이너에 마진을 주는 상황이 있다. 
+     이론 상 마진 "안에" 있기에 컨테이너와 마진이 떨어져야 하지만, 안 될 때가 있다.
+     그러니 컨테이너에 마진을 띄우는 게 아닌, 패딩으로 작업하는 것이 안전성이 높다. 
+
+     이게 적용 되는 것이 있고 없고 그러니.. 그냥 패딩으로 쓰자!
+    -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            width: 1300px;
+            height: 500px;
+            background: #ccc;
+            border: 2px solid red;
+            margin: 50px auto;
+        }
+
+        .first{
+            margin: 50px auto 0;
+        }
+
+        main{
+            background: lavender; 
+            padding-block: 30px;
+        }
+
+        main .container{
+            margin-block: 0;
+            width: 1500px;
+            background: green;
+            padding-top: 10px;
+            
+        }
+
+
+        #box1{
+            width: 300px;
+            height: 300px;
+            background: pink;
+            margin-top: 10px;
+        }
+        #box2{
+            width: 100px;
+            height: 50px;
+            background: peru;
+            /* margin-block: 10px ; */
+        }
+        #box3{
+            width: 200px;
+            height: 100px;
+            background: coral;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container first"></div>
+    <main>
+        <div class="container">
+            <div id="box1"></div>
+            <div id="box2"></div>
+            <div id="box3"></div>
+        </div>
+    </main>
+
+    <footer class="container"></footer>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>폰트 사이즈</title>
+  <style>
+    :root {
+      font-size: 100px;
+    }
+
+    html {
+      font-size: 100px;
+    }
+
+    .px40 {
+      font-size: 40px;
+    }
+
+    .em4 {
+      font-size: 4;
+    }
+
+    /* 내 폰트 사이즈 기준 (엄마한테 상속 받은 폰트 크기를 기준으로 4배) */
+
+    .rem4 {
+      font-size: 4rem;
+    }
+
+    /* 루트(html) 크기를 기준으로 4배가 됰. */
+
+    /* em, rem은 잡혀있는 기준으로 곱을 할 수 잇음. (공백, 크기 조절 기타 등등 가능) */
+  </style>
+</head>
+
+<body>
+  <div class="px40">
+    <p>기본 사이즈</p>
+    <p class="em4">4em</p>
+    <p class="rem4">4rem</p>
+  </div>
+</body>
+
+</html>

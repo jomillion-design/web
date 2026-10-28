@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*  */
+
+#wrap {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  height: 100px;
+  background: saddlebrown;
+  padding: 10px;
+}
+
+/* Q전체 요소의 텍스트 얼라인 센터를 하려면 어디에 하는게 제일 좋을까요? */
+
+header>h1 {
+  width: 30%;
+  line-height: 100px;
+  background: blanchedalmond;
+}
+
+nav {
+  width: 60%;
+  float: right;
+  background: darkgoldenrod;
+}
+ /* 여기에 nav를 해버리면 굉장히 귀찮게 설정해야되니 전체 구역인 nav에 먼저 설정 */
+nav ul {
+  width: 100%;
+}
+
+nav ul li{
+  float: left;
+  width: 25%;
+  height: 40px;
+  line-height: 40px; /* 한줄 정렬은 h와 Lh의 값이 동일 */
+  text-align: center;
+  border-right: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+nav ul li{
+  display: block;
+}
+
+#B {
+  height: 300px;
+  line-height: 300px;
+  text-align: center;
+  background: seagreen;
+}
+
+section {
+  height: 200px;
+  background: skyblue;
+  line-height: 200px;
+  text-align: center;
+}
+
+/* section article:last-child(2) {
+  이건 아티클 자식중 2번쨰(위에서) 불러오는거
+} */
+
+/* section article:last-child{
+  line-height: normal;
+} */
+
+article{
+  width: 400px;
+  height: 100%;
+}
+
+.c_1 {
+  background: rgb(41, 195, 120);
+  float: left;
+}
+
+.c_3 {
+  background: rgb(16, 54, 14);
+  float: left; /* 얘 이동 기준 정확히 이해하기 */
+}
+
+.c_4 {
+  background: red;
+  float: left;
+}
+
+.c_4 ul li{
+  display: block;
+}
+
+footer {
+  background: aquamarine;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+}
+
+.ff{
+  height: 100px;
+}
+
+/* 클래스 한개 가져와서 적용시키기,  */
+
+.f_logo {
+  width: 200px;
+  background: darkmagenta;
+  float: left;
+
+}
+
+.f_text {
+  width: 800px;
+  background: darkorange;
+  float: left;
+}
+
+.f_SNS {
+  width: 200px;
+  background: lawngreen;
+  float: left;
+}
+
+

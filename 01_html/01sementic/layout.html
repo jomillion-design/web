@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+
+<body>
+    <div class="wrap"> <!-- 묶은 이유: 얘 안 묶으면 다 따로 따로 정렬 해야 됨 / 그래서 걍 랩으로 한번에 묶어서 정렬 시킬 예정-->
+        <header>
+            <h2>header</h2>
+        </header>
+
+<!-- header 안에 내비가 들어가는 경우와 들어가지 않는 경우 -->
+        
+        <nav>
+            <ul> <!-- 순서 없이 쓰는 목록(리스트) / ol은 순서가 있는 것. 둘 다 자식은 li만 품는다. -->
+                <li><a href="#">메뉴1</a></li>
+                <li><a href="#">메뉴2</a></li>
+                <li><a href="#">메뉴3</a></li>
+                <li><a href="#">메뉴4</a></li>
+            </ul>
+        </nav>
+        <main> <!-- 핵심 콘텐츠 문서 내용을 담는 태그  -->
+            <section>
+                <h2>컨텐츠 영역-주제가 있는 컨텐츠</h2>
+                <article>
+                    <h3>독립적으로 배포</h3>
+                </article>
+                <article>
+                    <h3>독립적으로 배포</h3>
+                </article>
+            </section>
+            <aside>
+                <h2>사이드바</h2>
+            </aside>
+        </main>
+        <footer>
+            <h2>footer</h2>
+        </footer>
+    </div>
+</body>
+
+</html>

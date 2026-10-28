@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 인라인 묶기</title>
+    <style>
+    h2 {
+        font-weight: 400px;
+        font-size: 16px;
+        font-style: italic;
+    }
+
+    p {
+        background: #ccc;
+    }
+
+    strong {
+        background: red;
+        font-weight: normal;
+    }
+
+    b {
+        background: rgb(102, 173, 127);
+        font-weight: normal;
+    }
+
+    em {
+        font-style: normal;
+        background: green;
+    }
+
+    span {
+        font-size: 20px;
+        color: lawnGreen !important;
+    }
+
+    #blue {
+        color: blue;
+    }
+
+    .red {
+        color: red;
+    }
+
+    /* 태그 < class < id <인라인 스타일 < !important(이거 쓰면 협업 ㄴ 이라는 거읨 웬만하면) */
+    </style>
+</head>
+
+<body>
+    <h2>h2:제목태그-블록레벨</h2>
+    <p>
+        <strong>strong: 중요한 내용 강조, </strong> <!-- strong은 마지막 글자 공백을 먹는다. 붙여서 쓸거면 꼭 띄어쓰기 이거 맞는지 확인하기-->
+        <b> b 태그 단순히 굵게 표시할 때 사용</b>
+    </p>
+    <!-- em : 강조 / cite : 저작물 제목-->
+    <em> em 태그: 흐름상 특정 부분을 강조하고 싶을 때(이탤릭-기울림꼴) , </em>
+    <!-- cite 태그는 창작물 제목을 나타낼 때 쓰고, 보통 브라우저에서 이탤릭으로 표현됨
+        속성으로 씌일 때는 인용문, 변경 내용의 출처를 알리는 데 사용됨  -->
+    <cite> <a href="https://www.youtube.com/@flowyullab/">프로율랩 율쌤</a></cite>
+    <p cite="https://codingeverybody.kr/html-cite-%ec%86%8d%ec%84%b1/"> cite 태그가 속성값으로 적용 될 때 인용문, 변경 내용의 출처를 가르키는 url
+        값을 가지게 된다.</p>
+    <p><cite> 모나리자</cite>는 16세기 어쩌고</p>
+    <i> i 태그: 단순히 이탤릭 체로 표시할 때</i>
+    <p>
+        웹의 창시자인 팀 버너스리의
+        <!-- Q(q) 태그는 짧은 인용문을 가져올 때 쓰는 태그로, P(p)와 혼동하지 않도록 조심하자. -->
+        <q cite="">웹의 힘은 보편선에 있다. 장애에 구애없이 모든 사람이 접근 할 수 있는 것이 필수적인 요소이다.</q>
+    </p>
+    <p>루비(ruby)는 1995년 일본의 프로그래머인 마츠모토 유키히로(
+        <ruby> 
+            <!-- 보이는 것 처럼 글자 위에 발음 기호를 나타낼 때 사용되며, <rt>가 위 글자 <ruby는 아래 큰 글자이다. 교통 표지판에서도 자주 사용됨! -->
+            松本行弘
+            <rt>まつもとゆきひろ</rt>
+        </ruby>
+        )가 만든 프로그래밍 언어입니다.
+    </p>
+    <!-- 주석은 rt / ruby는 동아시아 주석(위에 쪼꼬만) -->
+    <!-- id:유일한 값을 가짐 / class: 여러 요소에 같은 스타일을 적용할 때 사용 -->
+    <!-- class 여러개 적용할 땐 띄어쓰기로 구분  -->
+    <span class="red bg1 bg2"> span:줄 안에서 <b> (인라인 묶기)</b></span>
+    <span id="yellow"> span:줄 안에서 <b> (인라인 묶기)</b></span>
+    <span class="red" id="blue" style="color:blueviolet"> span:줄 안에서 <b> (인라인 묶기)</b></span>
+    <span> span:줄 안에서 <b> (인라인 묶기)</b></span>
+    <!-- span은  css, 주로 텍스트와 인라인 콘텐츠를 한 번에 스타일 적용 시키기 위해서 묶는다. 주의! div는 블록, span은 인라인이므로 layout을 짤 때 span을 블록으로 생각해서 설계하지 말 것 -->
+</body>
+
+</html>

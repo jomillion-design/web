@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>하이퍼 링크</title>
+    <style>
+        section {
+            margin: 10pt;
+            padding: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section id="07_a01">하이퍼 링크 01 일반 링크와 이미지 링크
+            <a href="#">하이퍼 링크는 a href = ~~ (링크 혹은 #을 통한 문서 내 이동)을 한다.</a>
+
+            <a href="#">
+                <img src="https://image7.coupangcdn.com/image/coupang/common/logo_coupang_w350.png" alt="연습입니다">
+            </a>
+
+            <div class="p">
+                <h2>하이퍼 링크 삽입</h2>
+                <h4>이건 일반 하이퍼 링크와 이미지 하이퍼 링크를 연습함.</h4>
+                <h4>이미지 링크로 삽입 시 alt 넣는 걸 기억하자!!</h4>
+            </div>
+        </section>
+
+        <section id="07_a02">
+            <a href="./01.07a링크(10.26).html" target="_blank">07_a01 바로가기</a>
+            <p>이건 taret = _blank 속성을 사용해 새 탭으로 이동하게 만든 것</p>
+        </section>
+
+        <section id="07_a03">
+            <h2>상대 경로와 절대 경로로 불러오기 차이</h2>
+            <article>
+                <a href="../../../web/01_html/07a/test/a03.html"> web/01~/ ~ </a>
+                <p>
+                    이렇게 위에서부터 지정하듯이 내려오는 거는 절대 경로 (번지수임)
+                </p>
+            </article>
+            <article>
+                <a href="./01.07a링크(10.26).html"> ./ ../ web</a>
+                <p> 이렇게 나(./ ../ )로 시작해서 타고 올라가는 게 상대 경로.
+                </p>
+            </article>
+        </section>
+
+        <section id="07_a04">
+            <h2>04~05 앵커 만들기</h2>
+            <article>
+                <span>
+                    <a href="#">저 하늘 높이 올라가는 게야~~</a>
+                    <a href="#a_img">07 설명 이미지</a>
+                    <a href="#a_text">2번째 글자</a>
+                    <a href="#a_content">3번째 글자로</a>
+                    <a href="#07ft">맨 밑으로</a>
+                </span>
+            </article>
+
+            <article>
+                <ul id="07nb">
+                    <li><a href="#a_img">이미지로 하이퍼 링크</a></li>
+
+                    <li><a href="#a_text">2번째 글자로 이동</a>></li>
+                    
+                    <li><a href="#a_content">3번째 문단으로 이동</a></li>
+                </ul>
+            </article>
+
+            <article> 
+                <div class="a_img">
+                    <img src="./../../01_html/06img/images/04.jpeg" alt="전지현 에쁘당">
+                    <figcaption>전지현 너무 예쁨</figcaption>
+                </div>
+
+                <div class="a_text">
+                    <h3> 2번째 내용</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis eaque sint sit tempore esse! Qui ad nesciunt enim magni aspernatur</p>
+                </div>
+
+                <div class="a_content">
+                    <h3>3번째 내용</h3>
+                    <p> 오늘은 a링크 햇고 내일은 쉬는 시간에 복습한딘면.. .. html을 끝내고 싶다네 :) 하지만 불가능이라는 것을 안다네. 최대 해봤자 09까지 일듯? 중간 중간 태그 계속 쓰고 그러는 게 좋을듯. 기억이 안나 얘네가 무슨 속성이 있었는지 기억이 안나 오예 오에~
+                    </p>
+                </div>
+            </article>
+        </section>
+
+        <section id="07ft">
+            <p>여길 바닥이라 치자 ^^</p>
+        </section>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>순서가 없는 목록</title>
+  <style>
+
+    /* 각 각 서로처럼 바꾼 거 근데 잘 안씀 */
+    ul{
+      list-style: decimal;
+    }
+    ol{
+      list-style: disc;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>사과</li>
+    <li>바나나</li>
+    <li>포도</li>
+    <li>망고</li>
+  </ul>
+  <ol>
+    <li>사과</li>  <!-- li *4 < 이거 여러 개 만들 때 한 번에 쫘르륵 생성 -->
+    <li>바나나</li>
+    <li>포도</li>
+    <li>망고</li>
+  </ol>
+</body>
+</html>

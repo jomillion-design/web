@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>display</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    div {
+      margin: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    img {
+      width: 300px;
+    }
+
+    #inline img:nth-child(2) { /* 요 nth-child는 이미지 안에 사진 여러개일 때 콕 찝어서 불러오는거 */
+      visibility: hidden; /* 얘는 자리는 있는데 보이지만 않는 거  */
+    }
+
+    #block img {
+      /* 한칸 뛰는게 머라고? */
+      display: block;
+    }
+
+    #block img:nth-child(2) {
+      display: none; /* 얘는 걍 사라짐. 자리도 없어짐 */
+    }
+
+    ul{
+      width: 500px;
+      margin: 0 auto;
+      background: #ccc;
+    }
+
+    li{
+      background: cornflowerblue;
+      width: 100px;
+      display: inline; /* 얘도 잘 안씀. */
+      display: inline block;  /* 얘네는 잘 안쓴데여. 왜그런지 모르겠지만 알것 같기도함 > 이렇게 하나하나 하면 패딩값 어케 하게~ */
+    }
+
+    a{
+      color: inherit; /* 부모로 부터 상속 받는 색깔 값 / 리셋 시킬때 많이? 왜 써 */
+      text-decoration: none;
+      background: #a23737;   /* 여기 인라인이라는게 뭔 말인지 이해가 안가네 ??? */
+    }
+  </style>
+</head>
+
+<body>
+  <div id="inline">
+    <img src="https://wimg.mk.co.kr/news/cms/202504/23/news-p.v1.20250423.9529c84db6d644209a7ca07b0f60da2d_R.jpg"
+      alt="송혜교">
+    <img src="https://wimg.mk.co.kr/news/cms/202504/23/news-p.v1.20250423.9529c84db6d644209a7ca07b0f60da2d_R.jpg"
+      alt="송혜교">
+    <img src="https://wimg.mk.co.kr/news/cms/202504/23/news-p.v1.20250423.9529c84db6d644209a7ca07b0f60da2d_R.jpg"
+      alt="송혜교">
+  </div>
+
+  <div id="block">
+    <img src="https://wimg.mk.co.kr/news/cms/202504/23/news-p.v1.20250423.9529c84db6d644209a7ca07b0f60da2d_R.jpg"
+      alt="송혜교">
+    <img src="https://wimg.mk.co.kr/news/cms/202504/23/news-p.v1.20250423.9529c84db6d644209a7ca07b0f60da2d_R.jpg"
+      alt="송혜교">
+    <img src="https://wimg.mk.co.kr/news/cms/202504/23/news-p.v1.20250423.9529c84db6d644209a7ca07b0f60da2d_R.jpg"
+      alt="송혜교">
+  </div>
+
+  <nav>
+    <ul>
+      <li><a href="">메뉴1</a></li>
+      <li><a href="">메뉴2</a></li>
+      <li><a href="">메뉴3</a></li>
+      <li><a href="">메뉴4</a></li>
+    </ul>
+  </nav>
+</body>
+
+</html>

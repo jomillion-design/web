@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>number range date color file</title>
+</head>
+
+<body>
+  <form>
+    <fieldset>
+      <legend>numver range</legend>
+      <ul>
+        <li>
+          <label for="num"> 참여인원</small>최대 10명</label> <!-- 스몰 태그는 잘 사용하지 않음, 이런 게 있다는 것만 알아두기 -->
+          <input type="number" id="num" value="1" min="0" max="10">
+        </li>
+
+        <li>
+          <label for="num2">지원물품</small>(1인당 5개)</label>
+          <input type="number" id="num2" min="0" max="50" value="0" step="5"> <!-- 최소 단위 5, 숫자가 5씩 올라감 -->
+        </li>
+
+        <li>
+          <label for="sat">희망단계<small>(하,중,상)</small></label>
+          <input type="range" id="sat" min="1" max="3" value="1" />
+        </li>
+      </ul>
+    </fieldset>
+
+    <fieldset>
+      <legend>date / month / week / time / dateime-local </legend>
+      <ul>
+        <li><label>날짜<input type="date"></label></li>
+        <li><label>월<input type="month"></label></li>
+        <li><label>주<input type="week"></label></li>
+      </ul>
+      <h2>시간 입력</h2>
+      <ul>
+        <li>
+          <label>시작 시간 <input type="datetime-local" value="2026-10-20T09:00"></label>
+          <label>종료 시간 <input type="datetime-local" value="2024-04-07T17:50"></label>
+        </li>
+      </ul>
+
+      <fieldset>
+        <legend>color file</legend>
+        <label>컬러 선택 : <input type="color" value="#2E3651"></label>
+        <label>파일 선택 : <input type="file"></label>
+      </fieldset>
+    </fieldset>
+  </form>
+</body>
+
+</html>

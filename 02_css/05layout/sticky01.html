@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sticky</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      width: 100%;
+      height: 80px;
+      background-color: aqua;
+    }
+
+
+    main {
+      width: 100%;
+      height: 1500px;
+      background: red;
+    }
+
+    .contents {
+      width: 80%;
+      height: 1200px;
+      background: salmon;
+      float: left;
+    }
+
+    aside {
+      width: 18%;
+      height: 300px;
+      background: yellow;
+      float: right;
+      position: sticky;
+      top: 0px;
+    }
+
+/* 여기 css 고치디~ */
+
+    footer {
+      width: 100%;
+      height: 1000px;
+      background-color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <header>header</header>
+  </header>
+  <main class="container">
+    <section class="contents">
+      <h2>contents</h2>
+    </section>
+    <aside>aside</aside>
+  </main>
+    <footer>footer</footer>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 배경 이미지 </title>
+  <style>
+    body {
+      background-image: url(./img/bg1.png);
+      background-repeat: repeat;
+      /* 기본 값 */
+      background-repeat: no-repeat;
+
+      background-repeat: repeat-x;
+
+       background-repeat: repeat-y;
+    }
+
+    .rp {
+      width: 500px;
+      height: 500px;
+      border: 10px solid red;
+      background-image: url(./img/bg8.png);
+      background-size: 220px;
+      background-repeat: space;
+      /* d이미지가 짤리지 않게 남은 곤강을 이미지에 사이즈 가격으로 배분함 */
+
+      background-repeat: round;
+        /* 여기에 들어가는 거 쓰기 */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="rp"></div> <!-- .머머 쓰면  << div 클래스 만들어짐  -->
+  
+</body>
+
+</html>

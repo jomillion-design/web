@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>button</title>
+  <style>
+    li {
+      margin-bottom: 30px;
+    }
+
+    /* css에서 id 불러올 때는 # */
+    #btn {
+      /* 배경색 투명 */
+      background: transparent;
+
+      /* 보더 없애기 */
+      border: none;
+
+      /* 커서 포인터로 */
+      cursor: pointer;
+    }
+    
+  </style>
+</head>
+<body>
+  <form>
+    <ul>
+      <li><input type="text"></li>
+      <li>
+        <input type="submit" value="전송"> <!-- 제출이 기본 값으로 적혀있음, 인풋 버튼 둘 다 똑같음 ㅇㅇ -->
+        <button type="submit"> 전송 </button>
+      </li>
+
+      <li>
+        <input type="reset" value="다시 입력"> <!-- 얘도 기본으로 뭐가 적혀잇음 -->
+        <button type="reset"> 다시 입력 </button>
+      </li>
+
+      <li>
+        <input type="image" src="btn.png" alt="submit">
+        <button type="submit" id="btn"><img src="btn.png" alt="submit"></button> <!-- id는 여는 태그한테만. -->
+      </li>
+
+      <li>
+        <input type="button" value="새 탭 열기" onclick="window.open()">
+        <button type="button" onclick="window.open()" >새 탭 열기</button> <!-- 얘는 어따 추가함?? 자바?? -->
+      </li>
+    </ul>
+  </form>
+</body>
+</html>

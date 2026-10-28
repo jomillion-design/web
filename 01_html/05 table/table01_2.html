@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>테이블 만들기</title>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <table>
+    <!-- 셀을 합칠 떈 td, th한테 속성값을 줘야 함.   -->
+    <!-- rowspan="n" 가로 병합 / colspan="n" 세로 병합 -->
+    <!-- header body foother 같이 표에도 있음 -->
+    <!-- thead tbody tfoot << 웹접근성 때문에 -->
+    <!-- th는 제목이라 굵은 글자 -->
+    <!-- tr이 무조건 엄마셔, 데이터 베이스에 th(제목 셀, 세로 열을 만들어줌) , td는 셀 이라고 생각하면 됨(글자 쓴다고 생각해도 될듯) -->
+     <!-- th를 무조건 세로 열만 만들어준다고 생각하지말자!! 얜 걍 제목셀. 외워라. 규칙이다. -->
+    <caption>표의 구성 요소</caption>
+    <tr>
+      <th>주제</th>
+      <th>태그</th>
+      <th colspan="2">비교</th>
+    </tr>
+
+    <tr>
+      <th rowspan="4">테이블 구성요소</th>
+      <td>table</td>
+      <td>테이블을 만드는 태그</td>
+      <td>1</td>
+    </tr>
+
+    <tr>
+      <td>tr</td>
+      <td>테이블의 행을 만드는 태그</td>
+      <td> 1</td>
+    </tr>
+
+    <tr>
+      <td>th</td>
+      <td>테이블의 제목열을 만드는 태그</td>
+    </tr>
+
+    <tr>
+      <td>td</td>
+      <td>테이블의 기본 열을 만드는 태그</td>
+    </tr>
+
+
+  </table>
+</body>
+
+</html>

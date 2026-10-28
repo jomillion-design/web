@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="hp">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid #ccc;
+      border-collapse: collapse;
+    }
+
+    thead,
+    tfoot {
+      background-color: #eee;
+    }
+
+    th,
+    td {
+      padding: 10px 20px;
+      width: 150px;
+    }
+  </style>
+</head>
+
+<body>
+  <figure>
+    <img src="https://api.cdn.visitjeju.net/photomng/imgpath/201804/30/e9d9d95d-9003-4bfa-86ab-d5e26e3d6694.webp"
+      alt="용눈이오름">
+    <figcaption>완만하고 부드러운 용눈이 오름</figcaption>
+  </figure>
+
+  <figure> 
+    <figcaption>요안도리 객실</figcaption>
+    <table>
+    <caption>요안도라 객실</caption>
+
+    <thead>
+      <tr>
+        <th>방 이름</th>
+        <th>대상</th>
+        <th>크기</th>
+        <th>가격</th>
+        <!-- 얘는 지금 세로 가로행을 만든거지?? -->
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <th>유채방</th>
+        <td>여성 도미토리</td>
+        <td rowspan="3">4인실</td>
+        <td rowspan="4">1인 20,000원</td>
+      </tr>
+
+      <tr>
+        <th rowspan="2">동백방</th>
+        <td>동성도미토리</td>
+      </tr>
+
+      <tr>
+        <td>가족 1팀</td>
+      </tr>
+
+      <tr>
+        <th>천혜향방</th>
+        <td>-</td>
+        <td>2인실</td>
+      </tr>
+      <!-- (완) th colspan="4" 를 여따 넣으면 왜 이상하게 될까 => 스타일 적용 차이인듯? -->
+
+    </tbody>
+
+    <tfoot>
+      <tr>
+        <th colspan="4">
+          바깥에 전체를 렌트합니다
+        </th>
+      </tr> 
+    </tfoot>
+    
+    </table>
+  </figure>
+</body>
+
+</html>
