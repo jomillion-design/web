@@ -6,6 +6,7 @@
   margin: 0;
   /* 0 auto는 여다 쓰면 안됨 */
   padding: 0;
+  box-sizing: border-box;
 }
 
 ul {
@@ -18,6 +19,7 @@ a {
 }
 
 /* layout */
+/* #488C31 */
 
 body {
   color: #333;
@@ -32,7 +34,51 @@ body {
 header {
   height: 100px;
   background: red;
+  display: flex;
 }
+
+header h1{
+  background: #8dbe7c;
+}
+
+header nav{
+  width: 70%;
+  background: red;
+  margin-right: 10px;
+  align-self: flex-end;
+}
+
+header nav ul.gnb{
+  display: flex;
+}
+
+header nav ul.gnb>li{
+  position: relative;
+  flex: 1;
+  text-align: center;
+
+}
+header nav ul.gnb>li>a{
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+}
+
+header nav ul.gnb>li>ul{
+  position: absolute;
+  width: 100%;
+
+}
+header nav ul.gnb>li>ul>li{
+  height: 30px;
+  line-height: 36px;
+}
+header nav ul.gnb>li>ul>li>a{
+  display: block;
+}
+
+/* - */
 
 .img_slide {
   height: 300px;
@@ -42,9 +88,54 @@ header {
 .contents {
   height: 200px;
   background: aquamarine;
+  display: flex;
 }
 
+.contents h2{
+  font-weight: 400;
+  font-size: 18px;
+  background: #488C31;
+  padding: 6px 8px;
+  width: 100px;
+  text-align: center;
+  line-height: 1;
+  border-radius: 4px 4px 0 0;
+}
+
+.contents .notice{
+  background: whitesmoke;
+  flex: 1.2;
+}
+.contents .gal{
+  background: green;
+  flex: 1;
+}
+.contents .banner{
+  background: salmon;
+  flex: 1;
+  
+}
+
+/* - */
 footer {
   height: 100px;
   background: goldenrod;
+  display: flex;
+}
+
+footer .logo{
+  background: darkmagenta;
+  display: flex;
+  align-items: center;
+
+}
+
+footer .copy{
+  background: aqua;
+  flex: 1;
+}
+
+footer .fam{
+  width: 200px;
+  background: wheat;
 }
