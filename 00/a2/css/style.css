@@ -4,7 +4,7 @@
 
 * {
   margin: 0;
-  /* 0 auto는 여다 쓰면 안됨 */
+  /* 0 auto는 여다 쓰면 안됨 왜냐면? 그럼 모든 속성 선택자들이 중앙정렬이 되니깐!!*/
   padding: 0;
   box-sizing: border-box;
 }
@@ -25,15 +25,35 @@ body {
   color: #333;
 }
 
+.modal{
+  position: fixed;
+  inset: 0;
+  background: rgba(1,1,1,.6);
+  z-index: 100;
+  backdrop-filter: blur(4px);
+  display: none;
+}
+.modal_inner{
+  width: 700px;
+  height: 500px;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#closeBtn{}
+
+
+/* 가운데 정렬 하는 최고 엄마~ */
 .wrap {
   width: 1200px;
   margin: 0 auto;
-  /* 가운데 정렬 하는 최고 엄마~ */
 }
 
 header {
   height: 100px;
-  background: red;
+  background: rgb(132, 53, 53);
   display: flex;
   justify-content: space-between;
 }
@@ -86,6 +106,8 @@ header nav ul.gnb>li>ul>li>a{
   background: papayawhip;
 }
 
+/*  */
+
 .contents {
   height: 200px;
   background: aquamarine;
@@ -111,7 +133,7 @@ header nav ul.gnb>li>ul>li>a{
   background: green;
   flex: 1;
 }
-.contents .banner{
+.contents .w{
   background: salmon;
   flex: 1;
   

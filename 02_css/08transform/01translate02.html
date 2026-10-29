@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>translate</title>
+
+<!-- 옛날에 쓰던 방법임!!!!!! 
+혹시라도 회사 갔는데 이런 코드 창 떠있을 수도 있으니까 배우는 거!! 
+
+-->
+  
+  <style>
+    *{margin: 0; padding: 0;}
+
+    .modal{
+      position: fixed; /* 포지션 기준을 잡아줌 */
+      inset: 0;
+      background: rgba(0,0,0, .8);
+    }
+
+    #closeBtn{
+      width: 50px;
+      height: 50px;
+
+      background: #fff;
+      cursor: pointer;
+
+      /* 옛날 방식의 완전 가운데 정렬 세트 */
+      position: absolute;
+      bottom: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .modal_inner{ 
+      /* modal의 포지션을 받음(자식이라서) */
+      background: #fff;
+      width: 70%;
+      height: 500px;
+
+      position: absolute;
+      left: 50%;
+      top: 50%;
+
+      transform:translate(-50%,-50%) ; /* 상훈이 상태됨 */
+      top: 0;
+      transform: translateX(-50%); 
+    }
+
+    header{}
+
+  </style>
+
+</head>
+<body>
+  <div class="modal">
+
+    <button type="'button" id="closeBtn">X</button>
+
+    <div class="modal_inner">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit rem aliquid eaque optio nisi mollitia harum iusto eos delectus iure blanditiis dignissimos doloremque molestias illum, repellat autem laborum saepe excepturi itaque iste! Nesciunt ullam inventore at fugiat architecto impedit porro esse vitae quam libero, et, ab voluptates excepturi repellat voluptatibus delectus aperiam. Laboriosam officia corporis optio nam et, incidunt ratione quod consequuntur enim deleniti veniam odit, ea minima earum. Voluptatum ratione ut veritatis est sapiente similique nulla possimus ab enim velit maxime, doloribus minus? Consequuntur est sunt dolorem commodi ipsum voluptatibus consectetur reprehenderit molestiae consequatur sed. Sapiente, modi aliquid! Quae quas ullam aliquid voluptas sapiente neque vitae. Minima voluptates corporis consequatur, dolore cumque vitae quasi blanditiis, magnam amet voluptas, excepturi rem dolores adipisci architecto? Quisquam eligendi sint, nam, magnam repellat aliquid numquam omnis sunt nulla, vel velit? Illum culpa autem quaerat similique perferendis qui maxime commodi ea omnis laboriosam, et tempore quibusdam dicta numquam aliquam suscipit eaque asperiores veritatis labore sunt hic iste quidem nam cum. Voluptate nulla dolorum earum perferendis ex omnis accusamus ut, voluptas, veritatis aliquid ipsum numquam consequatur beatae distinctio aut incidunt ducimus esse vero natus sapiente ab ea iusto. Pariatur modi quisquam ducimus reprehenderit commodi veritatis enim temporibus. Laboriosam illo, quod nam facilis odio quasi magni accusantium non vel? Quis esse quos quasi aliquam dolorem voluptatibus autem consequuntur facilis similique nesciunt eaque corrupti tempore voluptas magnam, doloribus suscipit cumque adipisci ipsum explicabo! Harum aspernatur sint ipsum quia rerum amet nobis doloribus, saepe numquam omnis possimus? Voluptatem dolore illum quia sit delectus accusantium aperiam! Delectus rerum ad reprehenderit pariatur voluptatibus laboriosam odit blanditiis excepturi, dolorum ex tempore, doloremque ipsa iusto aliquid laudantium facere. Praesentium pariatur nihil suscipit sequi repudiandae. Ducimus reprehenderit fugiat enim, maxime laborum sequi eveniet? Quaerat earum molestias reprehenderit vero asperiores libero totam commodi eligendi.
+    </div>
+
+  </div>
+
+  <header><a href="#">logo</a></header>
+</body>
+</html>
