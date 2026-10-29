@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.box{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+/*  */
+
+.box_mom100 {
+  /* box_width, height를 위해 값 지정 */
+  width: 1360px;
+  height: 200px;
+  color: aliceblue;
+}
+
+.box_width100 {
+  width: 100%;
+  height: 10vh;
+  background: red;
+}
+
+.box_height100 {
+  height: 100%;
+  background: blue;
+}
+
+.box_mom_auto {
+  width: 1360px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  background: lavender;
+  color: aliceblue;
+  /* display: flex; 얘한테 이걸 넣을 필요가 없는이유 : 애초에 블록은 한 줄을 통째로 차지해서 괜찮다. */
+}
+
+
+
+.box_mom_auto2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box_width_auto,
+.box_height_auto {
+  width: 48%;
+  height: 100%;
+  /* auto 대신 100%를 주어 엄마 높이를 꽉 채우기! */
+  display: flex;
+  /* 글자를 정렬하기 위한 플렉스 켜기 */
+  justify-content: center;
+  /* 가로 가운데 정렬 */
+  align-items: center;
+  /* 세로 가운데 정렬 */
+  color: aliceblue;
+}
+
+.box_width_auto {
+  background: darkred;
+}
+
+.box_height_auto {
+  background: darkblue;
+}
+
+.box_mom_auto_text {
+  width: 100%;
+  height: 10%;
+  color: black;
+  margin-bottom: 10pt;
+}

@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 ul {
@@ -24,16 +25,17 @@ a {
 header {
   height: 100px;
   background: saddlebrown;
-  padding: 10px;
+  padding: 10px; /* 이렇게 줄거면 무조건 박스 사이징 보더 박스를 넣어야 한다~~ 왜냐면! 패딩 값이 적용 돼서 120pt가 되어버리기 때문이다!!
+  A. 그래서 그냥 전체 선택자에 박스 사이징 보더 박스를 넣었다. */
 }
 
 /* Q전체 요소의 텍스트 얼라인 센터를 하려면 어디에 하는게 제일 좋을까요? */
 
-header>h1 {
+/* header>h1 {
   width: 30%;
   line-height: 100px;
   background: blanchedalmond;
-}
+} */
 
 nav {
   width: 60%;
@@ -55,7 +57,7 @@ nav ul li{
   box-sizing: border-box;
 }
 
-nav ul li{
+nav ul a{
   display: block;
 }
 
@@ -84,26 +86,24 @@ section {
 article{
   width: 400px;
   height: 100%;
+  float: left; /* c_1~3 다 적용할 거라면 그냥 아티클에 넣자. */
 }
 
 .c_1 {
   background: rgb(41, 195, 120);
-  float: left;
 }
 
 .c_3 {
-  background: rgb(16, 54, 14);
-  float: left; /* 얘 이동 기준 정확히 이해하기 */
+  background: rgb(16, 54, 14); /* 얘 이동 기준 정확히 이해하기 */
 }
 
 .c_4 {
   background: red;
-  float: left;
 }
 
-.c_4 ul li{
-  display: block;
-}
+/* .c_4 ul li{
+  display: block; 필요없는 애~~ 왜냐면 얘는 ~~ 이미 블록이니칸 ㅋㅋ!!
+} */
 
 footer {
   background: aquamarine;
@@ -137,4 +137,4 @@ footer {
   float: left;
 }
 
-
+/* 총평!!  */

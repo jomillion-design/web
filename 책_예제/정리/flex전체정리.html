@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flex_전체_정리</title>
+  <link rel="stylesheet" href="ccs/flex.css">
+</head>
+
+<body>
+  <header>
+    <section class="">
+      <h2>Flex에 대해 정리를 해봅시다</h2>
+      <div class="h_p"> Css의 기본 문법부터 다시 기억해보자. <br>
+        선택자{속성1:속성값1} /ex container(선택자) { display(속성) : flex; (속성값)}
+        </p>
+
+        <div class="box_mom_100">
+          box_mom의 width 값: 1360px / height 값:800px
+          <div class="box_width_100">
+            가로 너비 지정 width
+          </div>
+
+          <div class="box_height_100">
+            세로 너비 지정 height
+          </div>
+        </div>
+
+
+        <div class="box_mom_auto"> width / height 가 auto라면?
+          <div class="box_mom_auto_text"> 본래 엄마, width 1360px height 200px / flex를 사용해 정렬하기 </div>
+          <div class="box_mom_auto2">
+            <div class="box_width_auto"> width를 auto로 하고, 글자를 가운데 정렬 시켜라</div>
+            <div class="box_height_auto"> flex를 auto로 하고, 글자를 가운데 정렬 시켜라</div>
+          </div>
+        </div>
+    </section>
+  </header>
+</body>
+
+</html>
+
+
+<!-- 스타일 기본 형식은 
+선택자 (이건 나중에 배웁니다)  {속성1: 속성값1 ; }
+중괄호 사이에 스타일 규칙 나열 해야하고, 여러 개일 경우 세미콜론으로 구분한다. 세미콜론은 꼭 찍어주어야함
+
+스타일 시트 
+사용자 스타일   /   브라우저 기본 스타일
+인라인/ 내부 / 외부 스타일 
+
+브라우저 기본 스타일-> 웹 문서에서 적용x html만으로 그 기능에 따라 크기에 맞게 보여줌 ex)h1
+인라인-> 태그내에 스타일을 직접 표시함. style-"속성: 속성값;"
+내부-> 웹 문서 header << 태그 안에 스타일 태그를 적어서 사용
+외부- 여러 웹 문서에서 사용할 스타일 파일 별도 저장, 필요 할 때마다 파일에서 가져와 사용.  link 태그만 사용해 외부 스타일 시트 파일 연결 ex) link rel="stylesheet" href="nn/nnn.css"
+
+캐스케이딩 - 물 흐르는 것 처럼 아래 적용 캐스케이딩=css는 같은 말
+스타일 우선 순위
+1. 얼마나 중요한가
+"  사용자(웹 방문자)>제작자(디자이너, 개발자)>브라우저(크롬, 사파리)"
+2. 얼마나 한정 지을 수 있는가
+!importent > 인라인 스타일 > id > class >타입(태그)
+3. 소스 순서에 따라
+중요, 명시도가 같다면 소스 순서에 따라 결정
+소스에서 나중에 온 스타일이 먼저 온 스타일을 덮어씀
+
+스타일 상속
+-자식 요소에서 별도로 스타일 지정 x -> 부모 요소에 있는 스타일 속성들이 자식 요소로 전달됨. 
+상속을 이용하면 스타일 시트를 효과적으로 만들 수 있다. 
+주의할 것은 스타일의 모든 속성이 부모 요소에서 자식 요소로 상속 되지 않음. (예 : 글자 색은 상속 / 배경 색 상속 x)
+
+
+Css 기본 선택자 
+모든 요소를 대상으로 스타일 적용할 때 사용, 기본 스타일 초기화할 때 자주 사용 된다. 
+    > *{ magrin: 0 auto; padding: 0 auto; }
+
+고전 태그 한계
+float - 정렬/해제 문제 많음
+inline-block -여백, 정렬 계산 필요
+position- 구조적 레이아웃 부적합 
+
+박스 모델 
+블록 요소는 너비가 100% / 인라인은 화면에 표시되는 콘텐츠 만큼만 영역을 차지함. 나머지 공간에는 다른 요소가 온다. 
+
+박스 모델에는 컨텐츠 구역(내용이 들어가는 것) 패딩, 박스 테두리, 마진 이렇게 있음.
+그래서 widht와 height값을 지정해 줘야만함. (인라인은 제외하고)
+
+width > 가로 넓이 지정 / height > 세로 넓이 지정
+
+.box >박스라는 클래스를 부름 {
+  width: 100px < 가로 너비를 100px로 지정함
+  height: 100px < 세로 너비를 100px로 지정함. 
+}
+
+여기서 100%를 하는 건, 부모 요소 (내 위의 사람을 기준으로) 너비를 기준으로 100%를 차지한다는 것임. 
+
+
+
+-->
