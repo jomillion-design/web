@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>링크스타일 - 가상 클래스 선택자</title>
+  <style>
+    * {
+      margin: 0 auto;
+      padding: 960px;
+    }
+
+    .navi ul {
+      display: flex;
+      list-style: none;
+      height: 50px;
+      color: black;
+      background: #ccc;
+      text-align: center;
+
+    }
+
+    .navi ul li {
+      flex: 1;
+    }
+
+    /* 
+            :link 방문하지 않은 링크에 스타일을 적용
+            :vsited 방문한 링크에 스타일을 적용
+    */
+
+    .navi ul a:link {
+      color: red;
+    }
+
+    .navi ul a:visited {
+      color: green;
+    }
+
+
+    /* 
+        :hover 웹 요소에 마우스 커서를 올려 놓을때의 스타일을 적용
+        :focus 웹 요소에 초점이 맞추어 졌을때의 스타일 적용
+    */
+    .navi ul a:hover,
+    .navi ul a:focus {
+      background: #222;
+      color: antiquewhite;
+    }
+
+    /* :active 웹 요소를 활성화 했을 때의 스타일 적용 */
+    .navi ul a:active {
+      background: darkblue;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="continer">
+    <nav class="navi">x`
+      <ul>
+        <li><a href="https://www.naver.com/" target="_blank">네이버</a></li>
+        <li><a href="#" target="_blank">쿠팡</a></li>
+        <li><a href="#" target="_blank">네이트 </a></li>
+        <li><a hrefhttps="#" target="_blank">이젠 아카테미</a></li>
+      </ul>
+    </nav>
+  </div>
+</body>
+
+</html>
