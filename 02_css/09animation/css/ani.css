@@ -41,8 +41,8 @@ img{
 }
 
 .swing img:nth-child(2){
-  transform-origin: top ; /* center는 왜 안 넣지? */
   animation: swingAni 3s infinite linear;
+  transform-origin: top ; /* center는 왜 안 넣지? */
 }
 
 @keyframes swingAni {
@@ -66,7 +66,6 @@ img{
 @keyframes trainAni {
   0%{right: -425px;}
   100%{right: 100%;}
-  
 }
 
 /* seat2 */
@@ -91,13 +90,10 @@ img{
   from{
     transform: translateX(0);
   }
-
   to{
     transform: translateX(-350px);
   }
 }
-  
-
   
 .machine{
   position: absolute;
