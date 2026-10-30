@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      width: 100%;
+      height: 100vh;
+    }
+
+    div {
+      width: 1200px;
+      height: 100px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      /* 먼저 박스에 크기를 정해주기. */
+    }
+
+    .box1 {
+      width: 100px;
+      background: darkblue;
+      animation: shape 2.5s infinite linear alternate;
+      position: absolute;
+      
+    }
+
+    .box1:hover {
+      background: rgb(65, 234, 104);
+    }
+
+    .box2 {
+      width: 100px;
+      background: rgb(0, 139, 14);
+      animation: shape2 4s infinite linear alternate;
+    }
+
+    .box3 {
+      width: 100px;
+      background: rgb(249, 25, 200);
+      animation: shape3 3s 1s infinite alternate;
+    }
+
+    @keyframes shape {
+      0% {
+        opacity: 100%;
+        border-radius: 0%;
+        right: 50px;
+      }
+
+      100% {
+        opacity: 0%;
+        border-radius: 50%;
+        right: 0px;
+      }
+    }
+
+    @keyframes shape2 {
+      0% {
+        transform: translate(10px, 5px) rotate(160deg);
+      }
+
+      100% {
+        border-radius: 50%;
+        transform: translate(0px) rotate(-30deg);
+      }}
+
+      @keyframes shape3 {
+      0% {
+        transform: translate(10px, 5px) rotate(160deg) skew(100deg,100deg);
+      }
+
+      100% {
+        border-radius: 50%;
+        transform: rotate(0deg) skew(0px, 0px);
+      }}
+
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+  </div>
+
+</body>
+
+</html>
