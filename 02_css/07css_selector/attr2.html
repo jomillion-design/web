@@ -13,11 +13,11 @@
       text-decoration: none;
       background: no-repeat left center;
     }
-  
+    
+    /* ^= 앞에 있는 글조 포함+ 속성 값 중 us가 포함 된 요소 */
   [title ^= 'us']{
     background-image: url(../images/us.png);
   }
-  /* ^= 앞에 있는 글조 포함+us가 들어간 것 */
 
   a[title ^= 'ja']{
     background-image: url(../images/jp.png);
@@ -34,6 +34,7 @@
   ul li a[href $='xls']{
     background-image: url(../images/excel_icon.gif);
   }
+
 
   [href *= 'w3']{
     background: pink;

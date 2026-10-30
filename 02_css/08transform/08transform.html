@@ -26,13 +26,14 @@
       left: 0;
       top: 0;
       transition: .6s;
-      transform-style: preserve-3d;
-      transform-origin: top center;
+      transform-style: preserve-3d; /* 자식이 3D 속성을 가져야 할 때 넣는 속성 */
+      transform-origin: top center; /* 기준점 잡는 속성 */
+
       
     }
 
     .con:hover .card {
-      transform: rotateX(180deg);
+      transform: rotateX(180deg); /* ?? */
     }
 
     .face {
@@ -41,7 +42,7 @@
       height: 100%;
       left: 0;
       top: 0;
-      backface-visibility: hidden;
+      backface-visibility: hidden;/* 뒷면 카드 돌려 안보이게 해놓은거 */
     }
 
     .face img { 
@@ -52,7 +53,7 @@
     }
 
     .back {
-       transform: rotatex(180deg);
+       transform: rotatex(180deg); 
     }
   </style>
 </head>

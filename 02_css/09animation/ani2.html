@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>animation</title>
+  <style>
+    div{
+      width: 100px;
+      height: 100px;
+      border: 1px solid #000;
+    }
+
+    .box1{
+      background-color: blueviolet;
+      border-color: rgb(61, 23, 110);
+      animation-name: shape;
+      animation-duration: 2s;
+      animation-iteration-count: infinite; /*얘랑 alternate 뭐엿지? */
+      animation-delay: 1s;
+      animation-timing-function: linear;
+    }
+    .box2{
+      background-color: aqua;
+      border-color: tomato;
+      animation: rotate 5s infinite alternate/* timing-function delay iteration-count direction fill-mode */;
+    }
+    .box3{
+      background-color: rgb(0, 255, 106);
+      border-color: rgb(0, 4, 255);
+      animation: shape 5s 2s 3;
+    }
+
+    @keyframes shape {
+      0%{border-radius: 0;}
+      30%{border-radius: 50%;}
+      100%{border-radius: 20px;}
+    }
+
+    @keyframes rotate {
+      from{transform: rotate(0);}
+      to{transform: rotate(45deg);}
+    }
+
+
+  </style>
+</head>
+<body>
+  <div class="box1"></div>
+  <div class="box2"></div>
+  <div class="box3"></div>
+</body>
+</html>
