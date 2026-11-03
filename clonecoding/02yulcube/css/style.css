@@ -97,7 +97,6 @@ body {
   inset: 0;
   outline: 0;
   backface-visibility: hidden;
-  display: none;
 }
 
 #circle article h2 {
@@ -232,27 +231,27 @@ body {
 
 
 .face_1 .signal_card:nth-child(1):hover .img_box {
-  background-image: url(../assets/core_01_hover.png);
+  background-image: url(../assets/core01_hover.png);
 }
 
 .face_1 .signal_card:nth-child(2):hover .img_box {
-  background-image: url(../assets/core_02_hover.png);
+  background-image: url(../assets/core02_hover.png);
 }
 
 .face_1 .signal_card:nth-child(3):hover .img_box {
-  background-image: url(../assets/core_03_hover.png);
+  background-image: url(../assets/core03_hover.png);
 }
 
 .face_1 .signal_card:nth-child(4):hover .img_box {
-  background-image: url(../assets/core_04_hover.png);
+  background-image: url(../assets/core04_hover.png);
 }
 
 .face_1 .signal_card:nth-child(5):hover .img_box {
-  background-image: url(../assets/core_05_hover.png);
+  background-image: url(../assets/core05_hover.png);
 }
 
 .face_1 .signal_card:nth-child(6):hover .img_box {
-  background-image: url(../assets/core_06_hover.png);
+  background-image: url(../assets/core06_hover.png);
 }
 
 .face_1 .signal_card h3 {
