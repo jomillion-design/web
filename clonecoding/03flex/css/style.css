@@ -6,7 +6,8 @@
 * {
   margin: 0;
   padding: 0;
-  block-size: border-box;
+  /* block-size: border-box;  박스 사이즈가 아니라 블록사이즈를 쓰시면 어띃케요~~~ */
+  box-sizing: border-box;
 }
 
 ul,
@@ -46,22 +47,21 @@ nav {
 
 nav ul {
   display: flex;
-  /* background: red; */
-  gap: 30px;
+  align-items: center; /* ul 안의 아이템들을 보조축 가운데 정렬 */
+  gap: 26px;
 }
 
 nav ul li {
   font-size: 20px;
-  /* 아이콘 왜 안 둘어들어 */
 }
 
-nav ul li:nth-child {
-  font-size: 12px;
-  padding-bottom: 2px;
+nav ul li:last-child {
+  font-size: 22px;
+  padding-bottom: 6px;
 }
 
-nav ul {
-  color: #999;
+nav ul a { /* 캐스케이딩 구조를 기억하라!! */
+  color: #bbb;
 }
 
 
@@ -78,13 +78,11 @@ main {
 header {
   width: 20%;
   height: 100%;
-  background: rgb(60, 106, 207);
   padding: 10vh 5vw;
-  display: flex;
+  display: flex; /* 얘를 없애면 address가 나옴 */
   flex-wrap: wrap;
   justify-content: center;
   align-content: space-between;
-  color: var(--font-color4);
 }
 
 header h1 {
@@ -94,13 +92,14 @@ header h1 {
 }
 
 header h1 img {
-  width: 5vw;
+  width: 4vw;
   margin-bottom: 15px;
 }
 
 header h1 span {
   font-size: 1vw;
   line-height: 1.2;
+  color: var(--font-color4);
   display: block;
   font-weight: 300;
 }
@@ -118,5 +117,5 @@ header address {
 section {
   width: 80%;
   height: 100%;
-  background: #292a3c;
+  background: blue;
 }
