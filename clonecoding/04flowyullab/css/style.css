@@ -3,9 +3,9 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Stack+Sans+Text:wght@200..700&display=swap');
 
-*{
+* {
   box-sizing: border-box;
-  /*  */
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -69,7 +69,7 @@
 }
 
 html {
-  overflow: hidden;
+  overflow-x: hidden; /* 이 부분이 잘 이해가 안되네?? */
 }
 
 body {
@@ -79,4 +79,92 @@ body {
     linear-gradient(135deg, #fffaf1 0%, #f6f0e2 38%, #ffe0ad 72%, #f3c27e 100%);
   overflow-x: hidden;
   color: var(--yul-brand-ink);
+}
+
+.inner {
+  width: clamp(1600px, 80vw, 90%);
+  /* 얘 부분 복습 ㄱㄱ */
+  margin-inline: auto;
+}
+
+header {
+  width: 100%;
+  /* 허그 콘텐츠는 자식 값 받아오겠다는 소리 = 자식 세로 값 받아오면 h 값 안씀 */
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background: rgba(255,250,241,.28);
+  backdrop-filter: blur(15px);
+  display: flex;
+  flex-direction: column;
+}
+header.on{
+  background: rgba(23, 36, 59, .94);
+}
+  header .inner {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header h1{}
+  header nav{
+    width: 200px;
+    height: 80px;
+    background: red;
+  }
+  header .right{
+    width: 200px;
+    height: 80px;
+    background: #6f9b65;
+  }
+
+main {
+  width: 100%;
+  /* display: flex; */
+}
+
+.main_visual {
+  height: 100vh;
+  background: #ccc;
+  padding: 100px;
+}
+
+.main_visual .inner {
+  height: 100%;
+  background: red;
+}
+
+.info {
+  padding: 80px 0 100px;
+}
+
+.article_top {
+  height: 140px;
+  background: var(--gray-02);
+  border-radius: 100px;
+}
+
+.article_bottom {
+  height: 900px;
+  margin-top: 100px;
+  background: blueviolet;
+}
+
+.motion {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.motion .inner {
+  height: 100px;
+  background: #000;
+}
+
+footer {
+  height: 400px;
+  background: #1f1b14;
 }
