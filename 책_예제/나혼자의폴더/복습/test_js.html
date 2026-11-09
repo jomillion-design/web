@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js test</title>
+  <style>
+    div {
+      width: 200px;
+      border: 2px solid #ccc;
+      border-radius: 3%;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    document.write('while 반복문으로 구구단')
+
+    let wx = 0;
+    let wy = 0;
+    document.write(`<div>`)
+    while (wx < 10) {
+      wx++;
+      document.write('<h1>' + wx + '단 </h1>');
+
+      let wy=0;
+
+    while (wy < 10) {
+      wy++;
+      document.write(`${wx}` + `x` + `${wy}` + `=` + `${wx * Wy}`);
+    }
+    }
+    document.write(`</div>`)
+  </script>
+</body>
+
+</html>

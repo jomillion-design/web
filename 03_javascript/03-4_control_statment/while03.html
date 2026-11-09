@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1~1000사이의 합</title>
+</head>
+
+<body>
+  <script>
+    //1~500사이에 6과 4의 배수만 찍기
+    let x = 1;
+    while (x <= 500) {
+      if (x % 6 === 0 && x % 4 === 0) document.write(`<p>${x}</p>`);
+      x++;
+    }
+
+    let i = 1;
+    let sum = 0;
+    while (1) {
+      sum += i;
+      i++;
+      if (i == 1001) break;
+    }
+    document.write('<h1>' + sum + '</h1>');
+  </script>
+</body>
+
+</html>
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js test</title>
+  <style>
+    div {
+      width: 200px;
+      border: 2px solid #ccc;
+      border-radius: 3%;
+      padding: 10px;
+    }
+  </style>
+</head>
+
+<!-- <body>
+  <script>
+    document.write('while 반복문으로 구구단<br>');
+
+    let wx = 0;
+    document.write(`<div>`);
+    
+    while (wx < 9) { // 9단까지만 하려면 9, 10단까지 하려면 10으로 설정
+      wx++;
+      document.write('<h1>' + wx + '단 </h1>');
+
+      let wy = 0; // ★ 매 단마다 wy를 0으로 초기화해야 합니다!
+      while (wy < 9) { // 9까지 곱하려면 9
+        wy++;
+        document.write(`${wx} x ${wy} = ${wx * wy}<br>`); // 계산식 수정
+      }
+    }
+    
+    document.write(`</div>`);
+  </script>
+</body>
+
+</html> -->
