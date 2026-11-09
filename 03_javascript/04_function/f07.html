@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>화살표 함수</title>
+</head>
+<body>
+  <script>
+    const doAddtion = (s1,s2) => s1+s2; //꽃괄호 안 넣으면 return이 자동
+    console.log(doAddtion(2,5));
+    const doAddtion2 = (s1,s2) => {
+      let result = (s1+s2) / 2;
+      return result;
+    }
+    console.log(doAddtion(4,6));
+    const num = n => n+1;
+    console.log(num(2)); 
+    //짧은 코드라면 화살표 문법을 굉~장히 많으 씀
+  </script>
+</body>
+</html>
