@@ -10,24 +10,18 @@
 <body>
   <script>
     //prompt로 이름 받아 오기 (uName)
+    const uName = prompt('성함', '조태림');
 
     //prompt로 나이 받아 오기 (uAge)
+    const uAge = prompt('나이', 20);
 
     //함수 printMsg(이름,나이) 선언 ->함수선언문
-
-    //호출uName,uAge
-
-    const uName = prompt('성함');
-    const uAge = prompt('나이');
-
-    function printMsg(name,age){
+    function printMsg(name, age) {
       document.write(`학생 이름:<b>${name}</b><br>`)
       document.write(`학생 이름:<b>${age}</b><br>`)
-      /* console.log(uName);
-      console.log(uAge); */
-     
     }
-    //printMsg(`학생 이름:<strong>${uName}</strong><br>학생 나이:<strong>${uAge}</strong>`);
+    //호출uName,uAge
+    printMsg(uName,uAge);
   </script>
 </body>
 
