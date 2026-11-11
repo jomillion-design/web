@@ -1,0 +1,95 @@
+document.addEventListener("DOMContentLoaded", (event) => {
+  //플러그인 등록(ScrollTrigger 사용 시 무조건 등록)
+  gsap.registerPlugin(ScrollTrigger)
+
+  //1. 기본 to /from/fromTo
+  //1) to: 지금 상태 -> 목표상태
+  gsap.to('.box_to', {
+    x: 200, //x축으로 200픽셀 이동
+    duration: 2, //2초동안 실행
+    ease: "power2.out",
+  });
+
+  //2) from : 어디서 등장 할래? (처음에 x: -200에 있다가 원래 자리로)
+  gsap.from('.box_from', {
+    x: -200,
+    opacity: 0.2,
+    duration: 1.5,
+  });
+
+  //3)FromTo :출발 도착 둘 다 내가 정함
+  gsap.fromTo('.box_from_to', {
+    scale: 0,
+  }, {
+    scale: 1.2,
+    rotate: 360,
+    duration: 1.5,
+  });
+
+  //2.옵션 6총사 : 버튼 클릭 이벤트
+  document.getElementById('btn_run').addEventListener('click', () => {
+    gsap.to('.dot', {
+      x: 400,
+      duration: 2,
+      delay: 0.2,//2초쉬고출발
+      repeat: 1,//1번 반복 (총 2번실행),무한 반복(-1), 반복 없음(0 = 기본 값)
+      yoyo: true,//animation-direction:alternate처럼 되돌아오기
+      ease: "bounce.out",
+    });
+  });
+
+  /* 3. stagger + ScrollTrigger */
+  //같은 셀렉터로 여러 요소가 선택될때 (NodeList, HTMLCollection,배열형태)
+  //stagger : 단일 요소에는 의미없음
+  gsap.from('.chips li', {
+    y: 50,
+    opacity: 0,
+    duration: .6,
+    stagger: .15, //요소들이 .15초 간격으로 순서대로 실행
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: '.chips',
+      start: 'top 50%', //화면의 50% 지점에서 시작
+      //markers: true,
+      toggleActions: 'play none none reverse',
+      // 내려올 때 실행, 올라가면 반대로
+      // toggleActions: "onEnter onLeave onEnterBack onLeaveBack"
+      //트리거 요소가 아래에서 위로 들어올 때
+      //트리거 요소가 스크롤 위로 지나가 화면에서 사라질 때
+      //트리거 요소가 다시 아래로 내려오며 화면에 재진입할 때
+      //트리거 요소가 다시 아래로 내려갔다가 화면에서 사라질 때
+      //play(재생 시작), pause(멈춘 상태), resume(멈췄던 부분부터 다시 실행), restart(항상 처음부터 다시 실행), reverse(반대로 재생 (거꾸로)), reset(애니메이션을 0초 상태로 초기화), none(아무것도 안 함)
+      toggleActions: 'restart none none none',
+      //스크롤이 들어올 떄 마다 항상 처음부터 다시 실행
+    }
+  });
+
+  const timeline_card = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.scene', //scene 클래스가 화면에 들어오면 실행
+      markers: true, //디버깅용 마커
+      start: 'top 70%',//트리거 시작 지점
+      toggleActions: 'play none none reverse',
+    }
+  });
+  timeline_card.from('.card1', {
+    y: 60,
+    opacity: 0,
+    duration: .6,
+  }).from('.card2', {
+    y: 80,
+    opacity: 0,
+    duration: .8,
+  }, '<0.2')
+    .from('.card3', {
+      y: 80,
+      opacity: 0,
+      duration: .8,
+    }, '>0.2')
+
+   /*
+     <	이전 애니메이션 시작 시점
+     >	이전 애니메이션 끝 시점 
+   */
+
+});//end
