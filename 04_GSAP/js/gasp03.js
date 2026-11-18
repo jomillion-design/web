@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     if (e.key === '1') tl1.play('label2');
     if (e.key === '2') tl1.play('label3');
     if (e.key.toLocaleLowerCase() === 'p') tl2.play();
-    if (e.key.toLocaleLowerCase() === 'o') tl2.paused(); //o가 안먹히네요 ^^;;~
+    if (e.key.toLocaleLowerCase() === 'o') tl2.paused(); 
     if (e.key.toLocaleLowerCase() === 'r') tl2.reverse();
   })
 });//end
